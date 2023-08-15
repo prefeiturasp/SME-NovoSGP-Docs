@@ -42,7 +42,7 @@ pipeline {
                     withCredentials([file(credentialsId: "${kubeconfig}", variable: 'config')]){
                        sh 'if [ -d "$home/.kube/config" ]; then rm -f "$home/.kube/config"; fi'
                        sh('cp $config '+"$home"+'/.kube/config')
-                       sh "kubectl rollout restart deployment/sgp-docs -n sme-sgp"						
+                       sh "kubectl rollout restart deployment/sgp-docs -n sme-novosgp"						
                        sh('rm -f '+"$home"+'/.kube/config')
                     }
                 }
