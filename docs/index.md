@@ -7,3 +7,4 @@
 <div style="text-align:center">
     <img src="./imagens/logo-sme.svg" alt="Logo Secretaria de Educação de São Paulo">
 </div>
+    

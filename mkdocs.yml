@@ -1,12 +1,52 @@
 site_name: Documentação Novo SGP
-repo_url: https://github.com/prefeiturasp/SME-NovoSGP-Docs
+repo_url: https://github.com/prefeiturasp/SME-NovoSGP
 copyright: | 
   &copy; Prefeitura Municipal de São Paulo
+
+nav:
+  - Início: index.md
+  - Integrações:
+    - API EOL: 
+      - O que é: Integracoes/EOL/apieol.md
+      - Configuração: Integracoes/EOL/apieolsecret.md
+    - API Jurema:
+      - O que é: Integracoes/Jurema/jurema.md
+      - Configuração: Integracoes/Jurema/juremasecret.md
+    - Escola Aqui:
+      - O que é ?: Integracoes/AE/ae.md
+      - Configuração: Integracoes/AE/aesecret.md
+    - Servidor de Relatórios:
+      - Para que serve ?: Integracoes/ServidorRelatorios/servidorrelatorios.md
+      - Configuração: Integracoes/ServidorRelatorios/servidorrelatoriossecret.md
+    - Jasper Reports:
+      - O que é ?: Integracoes/JasperReports/jasper.md
+      - Configuração: Integracoes/JasperReports/jaspersecret.md
+    - RabbitMQ:
+      - O que é ?: Integracoes/RabbitMQ/rabbit.md
+      - Configuração: Integracoes/RabbitMQ/rabbitsecret.md
+    - MinIO:
+      - O que é ?: Integracoes/MinIO/minio.md
+      - Configuração: Integracoes/MinIO/miniosecret.md
+    - Redis:
+      - O que é ?: Integracoes/Redis/redis.md
+      - Configuração: Integracoes/Redis/redissecret.md
+    - ElasticSearch:
+      - O que é ?: Integracoes/ElasticSearch/elasticsearch.md
+      - Configuração: Integracoes/ElasticSearch/elasticsearchsecret.md
+    - APM:
+      - O que é ?: Integracoes/APM/apm.md
+      - Configuração: Integracoes/APM/apmsecret.md
+    - GitHub:
+      - Para que serve ?: Integracoes/Github/github.md
+      - Configuração: Integracoes/Github/githubsecret.md
 
 extra:
     social:
       - icon: fontawesome/brands/github
-        link: https://github.com/prefeiturasp/SME-NovoSGP-Docs
+        link: https://github.com/prefeiturasp/SME-NovoSGP
+
+extra_css:
+  - css/style.css
 
 markdown_extensions:
     - pymdownx.highlight:
