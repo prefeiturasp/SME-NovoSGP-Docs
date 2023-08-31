@@ -3,27 +3,30 @@ pipeline {
       branchname =  env.BRANCH_NAME.toLowerCase()
       kubeconfig = getKubeconf(env.branchname)
       registryCredential = 'jenkins_registry'
+      namespace = "${env.branchname == 'pre-prod' ? 'sme-novosgp-d1' : env.branchname == 'development' ? 'novosgp-dev' : 'sme-novosgp' }"  
     }
   
     agent {
-      node { label 'AGENT-NODES' }
+      kubernetes { label 'builder' }
     }
 
     options {
-      buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
+      buildDiscarder(logRotator(numToKeepStr: '20', artifactNumToKeepStr: '20'))
       disableConcurrentBuilds()
       skipDefaultCheckout()
     }
   
     stages {
 
-        stage('CheckOut') {            
-            steps { checkout scm }            
-        }
-
-        stage('Build') {
+          stage('Build') {
+            agent { kubernetes { 
+                  label 'builder'
+                  defaultContainer 'builder'
+                }
+              }
           when { anyOf { branch 'master'; branch 'main';  } } 
           steps {
+            checkout scm 
             script {
               imagename1 = "registry.sme.prefeitura.sp.gov.br/${env.branchname}/sgp-docs"
               dockerImage1 = docker.build(imagename1, "-f Dockerfile .")
@@ -36,13 +39,18 @@ pipeline {
         }
 
         stage('Deploy'){
+             agent { kubernetes { 
+                  label 'builder'
+                  defaultContainer 'builder'
+                }
+              }
             when { anyOf {  branch 'master'; branch 'main'; } }        
             steps {
                 script{
                     withCredentials([file(credentialsId: "${kubeconfig}", variable: 'config')]){
                        sh 'if [ -d "$home/.kube/config" ]; then rm -f "$home/.kube/config"; fi'
                        sh('cp $config '+"$home"+'/.kube/config')
-                       sh "kubectl rollout restart deployment/sgp-docs -n sme-novosgp"						
+                       sh "kubectl rollout restart deployment/sgp-docs -n ${namespace}"						
                        sh('rm -f '+"$home"+'/.kube/config')
                     }
                 }
@@ -57,6 +65,6 @@ def getKubeconf(branchName) {
     else if ("homolog".equals(branchName)) { return "config_hom"; }
     else if ("release".equals(branchName)) { return "config_hom"; }
     else if ("release2".equals(branchName)) { return "config_hom"; }
-    else if ("development".equals(branchName)) { return "config_dev"; }
-    else if ("develop".equals(branchName)) { return "config_dev"; }
+    else if ("development".equals(branchName)) { return "config_release"; }
+    else if ("develop".equals(branchName)) { return "config_release"; }
 }
