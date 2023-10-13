@@ -5,6 +5,8 @@ copyright: |
 
 nav:
   - Início: index.md
+  - Metricas:
+    - Solução: Metricas/solucao.md
   - Integrações:
     - API EOL: 
       - O que é: Integracoes/EOL/apieol.md
