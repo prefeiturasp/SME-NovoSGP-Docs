@@ -24,7 +24,7 @@ pipeline {
                   defaultContainer 'builder'
                 }
               }
-          when { anyOf { branch 'master'; branch 'main';  } } 
+          when { anyOf { branch 'master'; branch 'main'; branch 'release'; } } 
           steps {
             checkout scm 
             script {
@@ -44,7 +44,7 @@ pipeline {
                   defaultContainer 'builder'
                 }
               }
-            when { anyOf {  branch 'master'; branch 'main'; } }        
+            when { anyOf {  branch 'master'; branch 'main'; branch 'release'; } }        
             steps {
                 script{
                     withCredentials([file(credentialsId: "${kubeconfig}", variable: 'config')]){
@@ -62,9 +62,9 @@ pipeline {
 def getKubeconf(branchName) {
     if("main".equals(branchName)) { return "config_prd"; }
     else if ("master".equals(branchName)) { return "config_prd"; }
-    else if ("homolog".equals(branchName)) { return "config_hom"; }
-    else if ("release".equals(branchName)) { return "config_hom"; }
-    else if ("release2".equals(branchName)) { return "config_hom"; }
+    else if ("homolog".equals(branchName)) { return "config_release"; }
+    else if ("release".equals(branchName)) { return "config_release"; }
+    else if ("release2".equals(branchName)) { return "config_release"; }
     else if ("development".equals(branchName)) { return "config_release"; }
     else if ("develop".equals(branchName)) { return "config_release"; }
 }
