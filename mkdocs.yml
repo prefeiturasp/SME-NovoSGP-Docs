@@ -7,6 +7,7 @@ nav:
   - Início: index.md
   - Metricas:
     - Solução: Metricas/solucao.md
+    - Agendamentos: Metricas/agendamentos.md
   - Integrações:
     - API EOL: 
       - O que é: Integracoes/EOL/apieol.md
