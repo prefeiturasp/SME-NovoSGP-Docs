@@ -11,6 +11,15 @@ O SGP utiliza o MinIO para armazenamento de arquivos de mídia (fotos e vídeos)
 
 ## Como utilizar ?
 
-No repositório do projeto [SME-NovoSGP](https://github.com/prefeiturasp/SME-NovoSGP) tem um compose (`docker-compose.minio`) para subida de um container MinIO localmente.
+Através do [Docker compose](https://github.com/prefeiturasp/SME-NovoSGP/blob/master/docker-compose.infra.yml "docker-compose.infra.yml"):
+
+```
+docker compose -f docker-compose.infra.yml up minio -d
+```
+
+Através do Tilt:
+```
+tilt up minio
+```
 
 Para utilização do MinIO no SGP é necessário configurar as variáveis da seção `ConfiguracaoArmazenamento` conforme mostrado na seção [Configuração](miniosecret.md)
