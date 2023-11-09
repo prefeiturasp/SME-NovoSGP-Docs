@@ -1,5 +1,5 @@
 # ElasticSearch
-<img src="../img/elasticsearch.png" width="200" class="center">
+<img src="img/elasticsearch.png" width="200" class="center">
 
 ## O que é ?
 
@@ -12,6 +12,26 @@ Começou utilizando para armazenar dados de auditoria (SME.SGP.Auditoria.Worker)
 
 ## Como utilizar ?
 
-No repositório do projeto [SME-NovoSGP](https://github.com/prefeiturasp/SME-NovoSGP) tem um compose (`docker-compose.elk`) para subida dos containers `RabbitMQ`, `ElasticSearch`, `Kibana` e `LogStash` localmente.
+Através do [Docker compose](https://github.com/prefeiturasp/SME-NovoSGP/blob/master/docker-compose.elk.yml "docker-compose.elk.yml"):
+
+```
+docker compose -f docker-compose.elk.yml up -d
+```
+
+Através do Tilt:
+```
+tilt up elk
+```
+Variaveis de ambiente necessários no SO:
+
+```
+ELASTIC_PASSWORD=SGP123
+```
+
+!!! tip
+
+    Crie um arquivo no mesmo diretório dos arquivos de Docker compose chamado .env com as variáveis acima, ou, as configure diretamente dentro de cada arquivo de Docker compose. Também podem ser carregadas diretamente nas variáveis de ambiente do Sistema Operacional.
+
+Para utilização do APM no SGP é necessário configurar as variáveis da seção `ElasticApm` conforme mostrado na seção [Configuração](apmsecret.md)
 
 Para utilização do ElasticSearch no SGP é necessário configurar as variáveis da seção `ElasticSearch` conforme mostrado na seção [Configuração](elasticsearchsecret.md)

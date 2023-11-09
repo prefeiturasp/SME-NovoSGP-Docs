@@ -5,6 +5,7 @@ copyright: |
 
 nav:
   - Início: index.md
+  - Docker & Tilt: docker_tilt.md
   - Integrações:
     - API EOL: 
       - O que é: Integracoes/EOL/apieol.md

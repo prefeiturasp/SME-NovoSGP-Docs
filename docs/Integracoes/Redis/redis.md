@@ -13,8 +13,16 @@ Dados utilizados com mais frequência ou com grande custo de busca são armazena
 
 ## Como utilizar ?
 
-No repositório do projeto [SME-NovoSGP](https://github.com/prefeiturasp/SME-NovoSGP) tem um compose (`docker-compose.redis`) para subida de um container Redis localmente.
+Através do [Docker compose](https://github.com/prefeiturasp/SME-NovoSGP/blob/master/docker-compose.infra.yml "docker-compose.infra.yml"):
 
+```
+docker compose -f docker-compose.infra.yml up redis -d
+```
+
+Através do Tilt:
+```
+tilt up redis
+```
 Para utilização do RabbiMQ no SGP é necessário configurar as variáveis conforme mostrado na seção [Configuração](redissecret.md)
 
 !!! tip "Desligar o Cache"
