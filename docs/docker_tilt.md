@@ -55,7 +55,6 @@ Expand-Archive "tilt.zip" -DestinationPath "tilt"
 Move-Item -Force -Path "tilt\tilt.exe" -Destination "$home\bin\tilt.exe"
 ```
 
-
 ## Como utilizar ?
 
 O Tilt utiliza o arquivo Tiltfile como configuração padrão e se integra com o Docker/Docker Compose.
@@ -97,7 +96,7 @@ tilt down logs postgres apm
 
 Além disso, você pode ativar/desativar serviços através da interface gráfica do Tilt, escolhendo um recurso e clicando em "Enable Resource". O mesmo pode ser feito para desativar o serviço.
 
-<img src="imagens/tilt.png" width="800" class="center">
+<img src="../imagens/tilt.png" width="800" class="center">
 
 Existem outras stacks disponíveis:
 

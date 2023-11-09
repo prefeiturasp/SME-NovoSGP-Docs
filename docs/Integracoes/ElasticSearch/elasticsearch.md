@@ -1,5 +1,5 @@
 # ElasticSearch
-<img src="img/elasticsearch.png" width="200" class="center">
+<img src="../img/elasticsearch.png" width="200" class="center">
 
 ## O que é ?
 
