@@ -5,6 +5,14 @@ copyright: |
 
 nav:
   - Início: index.md
+  - Permissionamento: Permissionamento/permissionamento.md
+  - WorkerSGP: 
+    - Visão Geral: WorkerSGP/workersgp.md
+    - DeadLetters: WorkerSGP/deadletter.md
+  - Monitoramento: 
+    - Visão Geral: Monitoramento/monitoramento.md
+    - Logs: Monitoramento/logs.md
+    - Performance: Monitoramento/performance.md
   - Docker & Tilt: docker_tilt.md
   - Integrações:
     - API EOL: 
@@ -80,6 +88,7 @@ theme:
       - navigation.expand
       - navigation.top
       - navigation.footer
+      - navigation.instant
     palette:
 
       # Palette toggle for light mode
