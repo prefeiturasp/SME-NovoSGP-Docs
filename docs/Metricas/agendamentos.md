@@ -24,3 +24,10 @@ Os Registros de agendamentos estão localizados no Hangfire na aba "Recurring Jo
 | sgp.metricas.registro.frequencia.aluno.duplicado | Registro de registro_frequencia_aluno duplicados para mesmo registro_frequencia | 02:15 |
 | sgp.metricas.consolidacao.frequencia.aluno.mensal.inconsistente | Registro de inconsistencia em calculo de consolidação mensal de frequencia com relação aos numeros de aula e ausencias existentes | 02:15 |
 | sgp.metricas.diario.bordo.duplicado | Registro DiarioBordo duplicados para mesma aula | 02:00 |
+| sgp.metricas.registro.frequencia.dia | Quantidade de registros de frequência lançados por dia/mês | 01:00 |
+| sgp.metricas.diario.bordo.dia | Quantidade de diários de bordo lançados por dia/mês | 01:00 |
+| sgp.metricas.devolutiva.diario.bordo.mes | Quantidade de devolutivas lançadas por mês | 01:00 |
+| sgp.metricas.aula.cj.mes | Quantidade de aulas CJ lançadas por mês | 01:00 |
+| sgp.metricas.encaminhamento.aee.mes | Quantidade de encaminhamentos AEE lançados por mês | 01:00 |
+| sgp.metricas.plano.aee.mes | Quantidade de planos AEE lançados por mês | 01:00 |
+| sgp.metricas.plano.aula.dia | Quantidade de planos de aula lançados por dia/mês | 01:00 |
