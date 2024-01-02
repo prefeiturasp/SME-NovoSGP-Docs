@@ -84,13 +84,13 @@ markdown_extensions:
 theme:
     name: material
     features:
-      - navigation.sections
-      - navigation.expand
       - navigation.top
       - navigation.footer
-      - navigation.instant
-    palette:
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - navigation.path
 
+    palette:
       # Palette toggle for light mode
        - scheme: default
          primary: teal
