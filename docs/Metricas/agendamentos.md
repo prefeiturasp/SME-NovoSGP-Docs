@@ -6,7 +6,7 @@ Os Registros de agendamentos estão localizados no Hangfire na aba "Recurring Jo
 
 | Rota | Descrição | Hora (GMT-3) |
 | --- | --- | :---: |
-| sgp.metricas.sgp.acessos | Quantidade de acessos diários ao SGP | 23:59 |
+| sgp.metricas.sgp.acessos | Quantidade de acessos diários ao SGP | 01:00 |
 | sgp.metricas.conselho.classe.duplicado | Registros de conselho de classe para o mesmo fechamento | 01:00 |
 | sgp.metricas.conselho.classe.aluno.duplicado | Registros de conselho de classe aluno para o mesmo conselho de classe | 01:15 |
 | sgp.metricas.conselho.classe.nota.duplicado | Registros de notas de conselho de classe para o mesmo aluno | 01:30 |
