@@ -31,3 +31,8 @@ Os Registros de agendamentos estão localizados no Hangfire na aba "Recurring Jo
 | sgp.metricas.encaminhamento.aee.mes | Quantidade de encaminhamentos AEE lançados por mês | 01:00 |
 | sgp.metricas.plano.aee.mes | Quantidade de planos AEE lançados por mês | 01:00 |
 | sgp.metricas.plano.aula.dia | Quantidade de planos de aula lançados por dia/mês | 01:00 |
+| sgp.metricas.aula.sem.atribuicao.substituicao.mes | Quantidade de aulas sem atribuição/substituição por mês | 01:00 |
+| sgp.metricas.fechamento.nota.dia | Quantidade de notas finais lançadas (fechamentos nota) por dia/bimestre | 02:00 |
+| sgp.metricas.conselho.classe.aluno.dia | Quantidade de estudantes com conselho de classe (conselhos classe aluno) por dia/bimestre | 02:00 |
+| sgp.metricas.fechamento.turma.disciplina.dia | Quantidade de componentes com fechamento (fechamentos turma disciplina) por dia/bimestre | 02:00 |
+
