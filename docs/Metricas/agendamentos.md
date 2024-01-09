@@ -35,4 +35,6 @@ Os Registros de agendamentos estão localizados no Hangfire na aba "Recurring Jo
 | sgp.metricas.fechamento.nota.dia | Quantidade de notas finais lançadas (fechamentos nota) por dia/bimestre | 02:00 |
 | sgp.metricas.conselho.classe.aluno.dia | Quantidade de estudantes com conselho de classe (conselhos classe aluno) por dia/bimestre | 02:00 |
 | sgp.metricas.fechamento.turma.disciplina.dia | Quantidade de componentes com fechamento (fechamentos turma disciplina) por dia/bimestre | 02:00 |
-
+| sgp.metricas.devolutiva.duplicado | Registro de devolutiva duplicados | 02:00 |
+| sgp.metricas.devolutiva.mais.um.diario | Registro de devolutiva em mais de um diário de bordo | 02:00 |
+| sgp.metricas.devolutiva.sem.diario | Registro de devolutiva sem diário de bordo | 02:00 |
