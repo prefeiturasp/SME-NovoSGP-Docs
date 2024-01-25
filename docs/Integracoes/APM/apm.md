@@ -12,10 +12,31 @@ O SGP utiliza o APM para gerar trace (rastro) da execução de rotinas permitind
 
 ## Como utilizar ?
 
-!!! danger
-    Não temos no repositório um compose para subida do APM Server localmente. Este será adicionado em breve!
+Utilizando [Docker compose](https://github.com/prefeiturasp/SME-NovoSGP/blob/master/docker-compose.elk.yml "docker-compose.elk.yml"): 
+
+```
+docker compose -f docker-compose.elk.yml up
+```
+
+Utilizando Tilt:
+
+```
+tilt up apm
+```
+
+Variaveis de ambiente necessários no SO:
+
+```
+ELASTIC_PASSWORD=SGP123
+APM_TOKEN=apm-server-secret-token
+```
+
+!!! tip
+
+    Crie um arquivo no mesmo diretório dos arquivos de Docker compose chamado .env com as variáveis acima, ou, as configure diretamente dentro de cada arquivo de Docker compose. Também podem ser carregadas diretamente nas variáveis de ambiente do Sistema Operacional.
 
 Para utilização do APM no SGP é necessário configurar as variáveis da seção `ElasticApm` conforme mostrado na seção [Configuração](apmsecret.md)
 
 !!! tip
+
     O APM pode ser desabilitado na aplicação alterando a configuração `Telemetria:Apm` para `false`

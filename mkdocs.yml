@@ -8,6 +8,15 @@ nav:
   - Metricas:
     - Solução: Metricas/solucao.md
     - Agendamentos: Metricas/agendamentos.md
+  - Permissionamento: Permissionamento/permissionamento.md
+  - WorkerSGP: 
+    - Visão Geral: WorkerSGP/workersgp.md
+    - DeadLetters: WorkerSGP/deadletter.md
+  - Monitoramento: 
+    - Visão Geral: Monitoramento/monitoramento.md
+    - Logs: Monitoramento/logs.md
+    - Performance: Monitoramento/performance.md
+  - Docker & Tilt: docker_tilt.md
   - Integrações:
     - API EOL: 
       - O que é: Integracoes/EOL/apieol.md
@@ -78,12 +87,13 @@ markdown_extensions:
 theme:
     name: material
     features:
-      - navigation.sections
-      - navigation.expand
       - navigation.top
       - navigation.footer
-    palette:
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - navigation.path
 
+    palette:
       # Palette toggle for light mode
        - scheme: default
          primary: teal
