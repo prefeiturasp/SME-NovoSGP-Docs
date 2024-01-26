@@ -5,6 +5,9 @@ copyright: |
 
 nav:
   - Início: index.md
+  - Metricas:
+    - Solução: Metricas/solucao.md
+    - Agendamentos: Metricas/agendamentos.md
   - Permissionamento: Permissionamento/permissionamento.md
   - WorkerSGP: 
     - Visão Geral: WorkerSGP/workersgp.md
